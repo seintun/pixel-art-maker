@@ -9,38 +9,73 @@
     <title>Sein's Pixel Art Maker</title>
 </head>
 <body>
-    <div class="container border">
+    <div class="m-2 border mx-auto">
         <h3>Sein's Pixel Art Maker</h3>
-    </div>
-    <div class="container border">
-        <h5>Click the pixel box with chosen color</h5>
-        <div class="canvas">
-            <!-- All the pixel grids are inserted HERE! -->
-        </div>
-    </div>
-    <div class="container border">
-        <!-- Select color palettes -->
-        <h5>Click your desired color here!</h5>
+        <a href="sein-pixel-artmaker.surge.sh">sein-pixel-artmaker.surge.sh</a>
+        <!-- Step 1: Select color palettes -->
+        <h5>Pick your desired color here!</h5>
         <div class="row">
-            <div class="col-2">
-                Red
+            <div id="red" class="palette m-3 red">
+                
             </div>
-            <div class="col-2">
-                Green
+            <div id="green" class="palette m-3">
+                
             </div>
-            <div class="col-2">
-                Blue
+            <div id="blue" class="palette m-3">
+                
             </div>
-            <div class="col-2">
-                Yellow
+            <div id="yellow" class="palette m-3">
+                
             </div>
-            <div class="col-2">
-                Purple
+            <div id="purple" class="palette m-3">
+                
             </div>
-            <div class="col-2">
-                Orange
+            <div id="orange" class="palette m-3">
+                
+            </div>
+            <div id="gray" class="palette m-3">
+                
+            </div>
+            <div id="black" class="palette m-3">
+                
+            </div>
+            <div id="white" class="palette m-3">
+                Eraser
+            </div>
+            <!-- <div id="red" class="m-3">
+                <input type="color" id="colorPicker">Customize
+            </div> -->
+        </div>
+    </div>
+    <div class="container border">
+        <!-- Step 2: Choose mode of art making: Pixel or Brush -->
+        <button onclick="drawPixels()" class="btn btn-primary" id="drawPixels">Draw by Pixels</button>
+        <button onclick="drawBrush()" class="btn btn-primary" id="drawBrush">Draw by Brush</button>
+        <button onclick="clearCanvas()" class="btn btn-primary" id="clearCanvas">Clear Canvas</button>
+        <div class="row">
+            <div class="col-6">
+                <h5>Press Shift key to activate Brush feature</h5>
+                <br>
+                Your current color:
+            </div>
+            <div id="currentPalette" class="palette m-3">
+                <!-- Color Picked from palettes will show HERE! -->
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <h5>Click the pixel box with chosen color</h5>
+            <div class="canvas">
+                <!-- Step 3: All interactions and colors will display HERE! -->
+                <!-- All the pixel grids are inserted HERE! -->
+                <table id="pixel-grids">
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
 </body>
 </html>
